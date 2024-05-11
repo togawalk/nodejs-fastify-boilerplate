@@ -1,6 +1,6 @@
 import fastify from 'fastify'
-import routes from './routes'
 import { loggerConfiguration } from './configuration/loggerConfiguration'
+import routes from './routes'
 
 const server = fastify({
   logger: loggerConfiguration,

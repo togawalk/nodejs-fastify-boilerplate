@@ -1,10 +1,9 @@
-import { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify'
+import type { FastifyInstance, FastifyReply, FastifyRequest } from 'fastify'
 
 export async function indexController(fastify: FastifyInstance) {
   fastify.get(
     '/checkhealth',
-    async function (_request: FastifyRequest, reply: FastifyReply) {
-      return reply.send('Alive')
-    }
+    async (_request: FastifyRequest, reply: FastifyReply) =>
+      reply.send('Alive'),
   )
 }
